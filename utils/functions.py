@@ -11,27 +11,30 @@ def list_operations():
    return operations_list[-5:]
 
 # проверка вывод списка последних 5 операций
-list_operation = list_operations()
-for lists in list_operation:
-   print(lists)
-   if 'from' in lists:
-      date_ = lists['from']
-      print(date_)
-   else:
-       print()
+# list_operation = list_operations()
+# for lists in list_operation:
+#    print(lists)
+#    if 'from' in lists:
+#       date_ = lists['from']
+#       print(date_)
+#    else:
+#        print()
 
 def date_time(date_t):
     '''Возвращает дату в нужном формате'''
-    date_t = '2018-06-29 08:15:27.243860'
+    # date_t = '2018-06-29 08:15:27.243860'
+    date_1 = list(date_t)
+    date_1[10] = ' '
+    date_t = ''.join(date_1)
     date_time_str = date_t                                # '2018-06-29 08:15:27.243860'
     date_time_obj = datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
     today = date_time_obj.date()
     return  today.strftime("%m.%d.%Y")
-date_ = '2019-01-05T00:52:30.108534'
-date_ = date_.split('-')
-print(date_)
 
-print(date_time(date_))
+
+# # проверка функции преобразования формата даты
+# date_ = '2019-01-05T00:52:30.108534'
+# print(date_time(date_))
 
 
 
@@ -53,7 +56,7 @@ def card_number(num):
         else:
             num_new.append(num[i])
 
-    num_new = ''.join(num_new)               # собираем в новый формат вывода
+    num_new = num = num1_lisl[0] + ' ' + ''.join(num_new)               # собираем в новый формат вывода
     return num_new
 
 # проверка функции по изменению номера карты
@@ -75,7 +78,7 @@ def check_number(num):
             num_new.append(num[i])
 
     num_new = num_new[-6:]         # берём последние 6 символов
-    num_new = ''.join(num_new)     # собираем в новый формат вывода
+    num_new = num1_lisl[0] + ' ' + ''.join(num_new)     # собираем в новый формат вывода
     return num_new
 
 # проверка функции по изменению номера счета
