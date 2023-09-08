@@ -1,7 +1,7 @@
 from functions import list_operations, date_time, card_number,check_number
 
 
-list_operation = []                             # списка последних 5 операций
+list_operation = []                             # список последних 5 операций
 list_operation = list_operations()              # получение списка последних 5 операций
 
 list_date = []                                  # список дат операций
@@ -25,6 +25,7 @@ for j in range(len(list_date)):
             else:
                 print(check_number(list_operation[i]["to"]))
 
-            print(f'{list_operation[i]["operationAmount"]["amount"]}')
+            print(f'{list_operation[i]["operationAmount"]["amount"]} '
+                  f'{list_operation[i]["operationAmount"]["currency"]["name"]}')
             list_date.remove(max(list_date))
             print()
