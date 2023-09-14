@@ -4,7 +4,7 @@ import json
 import datetime
 
 file_name = 'operations.json'
-def list_operations(file_name):
+def list_operations(file_name=file_name):
    '''из json в список операций operations_list и выдаёт последние 5 операций'''
 
    list_5_operation = []  # список последних 5 операций
@@ -88,7 +88,7 @@ def check_number(num):
     return num_new
 
 
-def final_list():
+def final_list(file_name=file_name):
     ''' вывод последних 5 операций в нужном формате'''
     list_operation = []  # список последних 5 операций
     list_operation = list_operations(file_name)  # получение списка последних 5 операций
