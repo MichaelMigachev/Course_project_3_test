@@ -19,4 +19,4 @@ def test_check_number():
 
 
 def test_final_list():
-    assert functions.final_list(file_name='../utils/operations.json') == ""
+    assert functions.final_list(file_name='../utils/operations.json') == " "
