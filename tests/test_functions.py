@@ -3,7 +3,7 @@ from utils import functions
 
 
 def test_list_operations():
-    assert type(functions.list_operations()) == list
+    assert type(functions.list_operations(file_name='../utils/operations.json')) == list
 
 
 def test_date_time():
@@ -19,4 +19,4 @@ def test_check_number():
 
 
 def test_final_list():
-    assert functions.final_list() == ""
+    assert functions.final_list(file_name='../utils/operations.json') == ""
